@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block title%}Category for Blog Post{% endblock %}
+{% block content%}
+<h2>Add Category</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top" style="padding:3%">
+      <div class="card-body">
+<div class="form-group">
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <br/>
+    <button class="btn btn-secondary">Add Category</button>
+</form>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

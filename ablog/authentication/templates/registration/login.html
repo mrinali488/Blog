@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block title%} Log In {% endblock %}
+{% block content%}
+<h2>Log In </h2>
+<div class="container ">
+  <div class="row">
+    <div class="col-md-12 card mb-4  mt-3 left  top" style="padding:3%">
+      <div class="card-body">
+<div class="form-group ">
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-secondary">Login</button>
+</form>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<script>-->
+<!--    var name = "{{user.username}}";-->
+<!--    document.getElementById("post-authour").value=name;-->
+<!--</script>-->
+{% endblock %}
